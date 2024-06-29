@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMTYPING.</title>
+</head>
+<style>
+        * {
+            text-decoration: none;
+            margin: 0px;
+            padding: 0px;
+            scroll-behavior: smooth;
+        }
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 50px;
+    font-weight: 800;
+    float: left;
+    font-family: courier;
+    color: #FFFFFF;
+}
+
+.image {
+    width: 600px;
+    height: 550px;
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #364f6b;
+    z-index: 1;
+    border-bottom: 1px solid #364f6b;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+.kolom-layanan {
+    margin-top: center;
+    margin-bottom: 50px;
+}
+
+.kolom-layanan .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    color: #364f6b;
+}
+
+h2 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+}
+
+a.tbl-biru {
+    background: #3f72af;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-biru:hover {
+    background: #fc5185;
+    text-decoration: none;
+}
+
+a.tbl-pink {
+    background: #fc5185;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px; 
+}
+
+a.tbl-pink:hover {
+    background: #3f72af;
+    text-decoration: none;
+}
+
+a.whatsapp-btn {
+    background: #fc5185;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.whatsapp-btn:hover {
+    background: #3f72af;
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Tambahkan jarak antara tombol */
+    margin-top: 20px; /* Tambahkan margin atas untuk memberi jarak dari teks */
+}
+
+.font-layanan {
+    text-align: center;
+    width: 179%;
+    border-radius: 10px 7px 10px;
+    background-color: #364f6b;
+    color: #FFFFFF;
+}
+
+.image-thumbnail{
+    max-width: 300px;
+    filter:drop-shadow(10px 10px 2px rgb(5, 139, 228));
+    float: left;
+    margin-right: 15px;
+    height: auto;
+
+}
+
+.text-layanan-word{
+    text-align: left;
+    width: 300%;
+    margin-top: 50px;
+}
+
+.image-excel{
+    max-width: 300px;
+    filter:drop-shadow(10px 10px 2px rgb(21, 128, 13));
+    float: left;
+    margin-left: 85%;
+    height: auto;
+    margin-right: 2%;
+}
+
+
+.text-layanan-excel{
+    text-align: left;
+    margin-left: 110%;
+    width: 200%;
+    margin-top: 50px;
+    
+}
+
+.image-ppt{
+    max-width: 300px;
+    filter:drop-shadow(10px 2px 2px rgb(242, 82, 2));
+    float: left;
+    margin-right: 18px;
+    height: auto;
+}
+
+.text-layanan-ppt{
+    text-align: left;
+    width: 200%;
+    margin-top: 70px;
+}
+
+.button-layanan-wa{
+    margin-top: 150px;
+    margin-left: 468px;
+}
+
+.whatsapp-layanan-btn{
+    background: #fc5185;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.whatsapp-layanan-btn:hover{
+    background: #3f72af;
+    text-decoration: none;
+}
+
+
+.font-testimoni {
+    margin-right: 50px;
+    border-radius: 10px 7px 10px;
+    background-color: #364f6b;
+    color: #FFFFFF;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.text-testimoni{
+    text-align: center;
+    font-family: 'comic sans ms';
+    font-size: larger;
+}
+
+   
+.slider-container {
+    position: relative;
+    width: 37%;
+    max-width: 22%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 90%; /* Memperkecil ukuran gambar */
+    border: 3px solid black; /* Border hitam */
+    border-radius: 15px;
+    margin-left: 10px;
+
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 2px;
+}
+
+.next {
+    right: 2px;
+}
+
+.font-tentangkami{
+    margin-right: 50px;
+    border-radius: 10px 7px 10px;
+    background-color: #364f6b;
+    color: #FFFFFF;
+    margin-top: 70px;
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container img {
+    width: 490px;
+    height: 480px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h1 {
+    color: #364f6b;
+    font-size: 24px;
+    font-family: 'comic sans ms';
+    margin-bottom: 10px;
+    text-align: justify;
+    
+}
+
+.content p {
+    color: black;
+    line-height: 1.6;
+    font-size: large;
+    font-family: 'comic sans ms';
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #0097a7;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #005f5f;
+}
+
+
+#contact {
+    background: #dedede;
+    padding: 50px 0px;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.footer-section {
+    width: 20%;
+    margin: 0 auto;
+}
+
+h3 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+}
+
+#copyright {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px;
+    margin-top: 50px;
+}
+
+
+
+</style>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="">GMTYPING.</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#Layanan">Layanan</a></li>
+                    <li><a href="#Testimoni">Testimoni</a></li>
+                    <li><a href="#Tentang Kami">Tentang Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper" id="home">
+        <!-- untuk home -->
+        <section id="home">
+            <img src="https://img.freepik.com/free-vector/code-typing-concept-illustration_114360-3581.jpg?t=st=1718102552~exp=1718106152~hmac=82ba11e71d131aa7660125696213b22011d2376771aea9ac86a43fb86be97c8f&w=740"
+            class="image"/>
+            <div class="kolom">
+                <p class="deskripsi"> <h3> Jasa pengetikan online berbagai jenis dokumen: Word, Excel, PPT, CV, Input Data, dan lainnya bergaransi, cepat, dan aman!</h3>
+                    <h4>✅Harga murah, mulai dari Rp1.000/halaman</h4>
+                    <h4>✅Gratis revisi unlimited tanpa batasan waktu</h4>
+                    <h4>✅Garansi uang kembali 100% jika terlambat</h4>
+                    <h4>✅Aman dan Rahasia dengan perlindungan privasi</h4>
+                    <h4>✅Pelayanan Cepat</h4>
+                <div class="button-container">
+                    <a href="#Layanan" class="tbl-pink" role="button">Cek Layanan</a>
+                    <a href="https://wa.me/yourwhatsappnumber" class="whatsapp-btn">Pesan Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- layanan -->
+        <section id="Layanan">
+            <div class="kolom-layanan">
+                <h2 class="font-layanan">Layanan</h2>
+                <article>
+                    <div id="word">
+                    <img src="MicrosoftWord.png" class="image-thumbnail" alt="MicrosoftWord">
+                   </div>
+                    <div class="text-layanan-word">
+                       <h3>Word</h3>
+                        <h4>✅Merapikan Halaman  (Rp1.0000/Halaman)</h4>
+                        <h4>✅Pengetikan Standar (Rp2.000/Halaman)</h4>
+                        <h4>✅Pembuatan makalah  (Rp2.000-4.000/Halaman)</h4>
+                        <h4>✅Pembuatan daftar isi,daftar pustaka  (Rp5.000-10.000)</h4>
+                        <h4>✅Pembuatan CV  (Rp10.000-15.0000)</h4>
+                    </div>
+                 </article>
+                <article>
+                    <div id="excel">
+                    <img src="MicrosoftExcel.png" class="image-excel" alt="MicrosoftExcel">
+                   </div>
+                    <div class="text-layanan-excel">
+                       <h3>Excel</h3>
+                        <h4>✅Input Data (Rp500-2000/Sel)</h4>
+                        <h4>✅Pengetikan Perhalaman (Rp5000)</h4>
+                        <h4>✅Pembuatan Formula (Rp3.000-10.0000)</h4>
+                        <h4>✅Pembuatan Grafik (Rp4.000-10.000)</h4>
+                    </div>
+                 </article>
+                 <article>
+                    <div id="ppt">
+                    <img src="MicrosoftPowerPoint.png" class="image-ppt" alt="MicrosoftPowerPoint">
+                   </div>
+                    <div class="text-layanan-ppt">
+                       <h3>PowerPoint</h3>
+                        <h4>✅Pembuatan Presentasi (Rp.4000/Halaman)</h4>
+                        <h4>✅Pembuatan Presentasi Dari Makalah (Rp.3.000/Halaman)</h4>
+                        <h4>✅Pembuatan Presentasi Dari Video (Rp.3.000/Halaman)</h4>
+                    </div>
+                    <div class="button-layanan-wa">
+                        <a href="https://wa.me/yourwhatsappnumber" class="whatsapp-layanan-btn">Pesan Sekarang</a>
+                    </div>
+                 </article>
+        </section>
+
+        <!-- testimoni -->
+        <section id="Testimoni">
+            <div class="tengah">
+                <div class="kolom-testimoni">
+                    <h2 class="font-testimoni">Testimoni</h2>
+                    <p class="text-testimoni">Seluruh testimonial atau penilian di halaman ini merupakan bukti nyata atas kinerja dari masing-masing tim kami selama mengerjakan proyek.</p>
+                    <p class="text-testimoni"> Anda dapat melihat beberapa testimoni dari customer yang sudah order dijasa kami sebagai pertimbangan sebelum Anda memutuskan untuk bekerja sama.</p>
+                </div>
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="testimoni1.jpg" alt="Image 1"></div>
+                        <div class="slide"><img src="testimoni2.jpg" alt="Image 2"></div>
+                        <div class="slide"><img src="testimoni3.jpg" alt="Image 3"></div>
+                        <div class="slide"><img src="testimoni4.jpg" alt="Image 4"></div>
+                        <div class="slide"><img src="testimoni5.jpg" alt="Image 5"></div>
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <script>
+                    let slideIndex = 0;
+
+const showSlides = (n) => {
+    const slides = document.querySelectorAll('.slide');
+    if (n >= slides.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length - 1 }
+    const offset = -slideIndex * 100;
+    document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+}
+
+const nextSlide = () => showSlides(++slideIndex);
+const prevSlide = () => showSlides(--slideIndex);
+
+document.querySelector('.next').addEventListener('click', nextSlide);
+document.querySelector('.prev').addEventListener('click', prevSlide);
+
+showSlides(slideIndex);
+
+                </script>
+            </div>
+        </section>
+
+        <!-- tentang kami -->
+        <section id="Tentang Kami">
+                <div class="kolom-tentangkami">
+                    <h2 class="font-tentangkami">Tentang Kami</h2>
+                    <div class="container">
+                        <img src="https://img.freepik.com/free-vector/hand-drawn-international-employees-illustration_23-2149491509.jpg?t=st=1718378570~exp=1718382170~hmac=1199acc2942895b30b56cd32b6b06c95a7050360c41f1087629e18b6477ac0f4&w=996" alt="visual-human">
+                        <div class="content">
+                            <h1>Misi kami adalah memudahkan Anda dalam mengerjakan segala hal berkaitan dengan pengetikan</h1>
+                            <p>GMTYPING telah berhasil membantu ratusan orang mengerjakan pekerjaan pengetikan, editing, dan pembuatan dokumen secara online.</p>
+                            <p>GMTYPING berupaya terus untuk meningkatkan kualitas pengetikannya guna memenuhi tuntutan pekerjaan saat ini, sehingga adaptif sesuai perkembangan zaman.</p>
+                            <p>Kami menyediakan layanan online jasa pengetikan, seperti pengetikan surat, karya tulis, makalah, proposal, dan lain sebagainya. Selain itu, kami juga melayani pembuatan presentasi dan file Microsoft Excel.</p>
+                            <p>Kepercayaan Anda merupakan prioritas kami.</p>
+                        </div>
+                    </div>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+                            <a href="https://www.tiktok.com" target="_blank" class="fab fa-tiktok"></a>
+                            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+                        </div>
+                </div>
+        </section>
+    </div>
+
+    <div id="contact">
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer-section">
+                    <h3>GMTYPING.</h3>
+                    <p>Jasa pengetikan online berbagai jenis dokumen: Word, Excel, PPT, CV, Input Data, dan lainnya bergaransi, cepat, dan aman!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hubungi Kami</h3>
+                    <p>CS@GMTYPING.id</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Social</h3>
+                    <p><b>Instagram: </b>GMTYPING_</p>
+                    <p><b>Facebook: </b>GMTYPING</p>
+                    <p><b>Tiktook: </b>GMTYPING_</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2024. <b>GMTYPING.</b> All Rights Reserved.
+        </div>
+    </div>
+    
+</body>
+</html>
